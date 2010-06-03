@@ -14,24 +14,15 @@
  * limitations under the License.
  */
 
+package griffon.lookandfeel.substance
+
+import griffon.lookandfeel.AbstractLookAndFeelTestCase
+
 /**
  * @author Andres Almiray
  */
-class LookandfeelSubstanceGriffonPlugin {
-    def version = 0.1
-    def griffonVersion = '0.3.2 > *'
-    def dependsOn = [lookandfeel: 0.1,
-                     'trident-builder': 0.3]
-    def toolkits = ['swing']
-    def license = 'Apache Software License 2.0'
-
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'Substance Swing Look & Feel'
-    def description = '''
-Substance Swing Look & Feel.
-'''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Lookandfeel+Substance+Plugin'
+class SubstanceLookAndFeelTests extends AbstractLookAndFeelTestCase {
+    void testSubstanceAutumLookAndFeel() {
+        setAndTestLookAndFeel('Substance', 'Autum')
+    }
 }
